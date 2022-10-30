@@ -1,6 +1,6 @@
 specVersion: 0.0.4
 schema:
-  file: ./schema.graphql
+  file: schema.graphql
 dataSources:
   - kind: ethereum
     name: Contract
@@ -20,7 +20,7 @@ dataSources:
         - ItemRemoved
       abis:
         - name: Contract
-          file: ./abis/Contract.json
+          file: Contract\abis\Contract.json
       eventHandlers:
         - event: CollectionFound(string,string,indexed address)
           handler: handleCollectionFound
@@ -30,4 +30,4 @@ dataSources:
           handler: handleItemListed
         - event: ItemRemoved(indexed address,indexed address,indexed uint256)
           handler: handleItemRemoved
-      file: ./src/contract.ts
+      file: Contract\Contract.wasm
